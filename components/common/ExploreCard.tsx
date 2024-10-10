@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Instagram from "@/app/img/instagram-color.png";
+import Instagram from "@/assets/images/instagram-color.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import defaultImage from "@/app/img/no-image.png";
+import defaultImage from "@/assets/images/no-image.png";
 
 interface ExploreCardProps {
   img?: string | StaticImport;

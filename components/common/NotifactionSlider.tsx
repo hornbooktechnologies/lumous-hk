@@ -3,18 +3,12 @@ import React from "react";
 import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import LeftArrow from "@/app/img/left-arrow.png";
-import RightArrow from "@/app/img/right-arrow.png";
+import LeftArrow from "@/assets/images/left-arrow.png";
+import RightArrow from "@/assets/images/right-arrow.png";
 import Image from "next/image";
+import { NotificationSliderData } from "@/app/constant";
 
 const NotificationSlider = () => {
-  const sliderData = [
-    { text: "Free same-day delivery on orders $35+ when you order by 2PM." },
-    { text: "Free same-day delivery on orders $35+ when you order by 2PM." },
-    { text: "Free same-day delivery on orders $35+ when you order by 2PM." },
-    { text: "Free same-day delivery on orders $35+ when you order by 2PM." },
-  ];
-
   function SampleNextArrow(props: CustomArrowProps) {
     const { className, style, onClick } = props;
     return (
@@ -52,7 +46,7 @@ const NotificationSlider = () => {
   return (
     <div className="slider-container overflow-hidden bg-teal-800 text-white text-center py-2 text-sm notification-slider">
       <Slider {...settings}>
-        {sliderData.map((item, index) => (
+        {NotificationSliderData.map((item, index) => (
           <div
             key={index}
             className="text-[8px] leading-[12px] tracking-[0.02em] lg:font-semibold lg:text-[14px] lg:leading-[21px] lg:tracking-[0.02em]"

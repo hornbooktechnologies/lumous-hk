@@ -1,9 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import StarIcon from "./StarIcon";
 
 interface ProductCardProps {
-  image: string;
+  image: StaticImageData;
   title: string;
   price: string | number;
   oldPrice?: string | number;

@@ -6,6 +6,8 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import orderNow from "@/assets/images/orderNow.png";
 import Ellen from "@/assets/images/ellen&co.png";
+import PeanutButter from "@/assets/images/peanutButter.png";
+import { tabs } from "@/app/constant";
 
 const VeterinarySection = () => {
   const [activeTab, setActiveTab] = useState("dog");
@@ -20,14 +22,6 @@ const VeterinarySection = () => {
       setLoaded(true);
     },
   });
-
-  const tabs = [
-    { name: "cat", icon: "/images/catBlack.svg" },
-    { name: "dog", icon: "/images/dogBlack.svg" },
-    { name: "new born", icon: "/images/newBornBlack.svg" },
-    { name: "fish", icon: "/images/fish.svg" },
-    { name: "birds", icon: "/images/bird.svg" },
-  ];
 
   return (
     <div className="max-w-7xl mx-auto py-8 px-15">
@@ -45,8 +39,9 @@ const VeterinarySection = () => {
           <button
             key={tab.name}
             onClick={() => setActiveTab(tab.name)}
-            className={`flex flex-col lg:flex-row items-center px-12 py-2 rounded-full font-medium text-sm capitalize space-x-2 ${activeTab === tab.name ? "bg-[#112025] text-[#EFF0F4]" : ""
-              }`}
+            className={`flex flex-col lg:flex-row items-center px-12 py-2 rounded-full font-medium text-sm capitalize space-x-2 ${
+              activeTab === tab.name ? "bg-[#112025] text-[#EFF0F4]" : ""
+            }`}
           >
             <div className="w-6 h-6 flex-shrink-0">
               <Image
@@ -54,13 +49,15 @@ const VeterinarySection = () => {
                 alt={tab.name}
                 width={24}
                 height={24}
-                className={`w-full h-full ${activeTab === tab.name ? "filter invert" : ""
-                  }`}
+                className={`w-full h-full ${
+                  activeTab === tab.name ? "filter invert" : ""
+                }`}
               />
             </div>
             <span
-              className={`uppercase ${activeTab === tab.name ? "text-white" : "text-black-300"
-                } `}
+              className={`uppercase ${
+                activeTab === tab.name ? "text-white" : "text-black-300"
+              } `}
             >
               {tab.name}
             </span>
@@ -73,8 +70,9 @@ const VeterinarySection = () => {
           <button
             key={index + 1}
             onClick={() => setActiveTab(tab.name)}
-            className={`flex flex-col justify-center items-center py-2.5 px-5 lg:rounded rounded-xl ${activeTab === tab.name ? "bg-[#112025]" : "bg-gray-50"
-              } `}
+            className={`flex flex-col justify-center items-center py-2.5 px-5 lg:rounded rounded-xl ${
+              activeTab === tab.name ? "bg-[#112025]" : "bg-gray-50"
+            } `}
           >
             <div className="w-6 h-6 flex-shrink-0">
               <Image
@@ -82,13 +80,15 @@ const VeterinarySection = () => {
                 alt={tab.name}
                 width={24}
                 height={24}
-                className={`w-full h-full ${activeTab === tab.name ? "filter invert" : ""
-                  }`}
+                className={`w-full h-full ${
+                  activeTab === tab.name ? "filter invert" : ""
+                }`}
               />
             </div>
             <span
-              className={`font-medium text-[10px] leading-[15px] tracking-[0.02em] ${activeTab === tab.name ? "text-white" : "text-black-300"
-                } `}
+              className={`font-medium text-[10px] leading-[15px] tracking-[0.02em] ${
+                activeTab === tab.name ? "text-white" : "text-black-300"
+              } `}
             >
               {tab.name}
             </span>
@@ -100,7 +100,7 @@ const VeterinarySection = () => {
         <>
           <div className="hidden lg:flex flex-col lg:flex-row gap-6">
             <div className="flex-auto w-[40%] relative">
-              <div className="rounded-lg overflow-hidden relative min-h-[546px] bg-[url('/images/MaskGroup.png')]">
+              <div className="rounded-lg overflow-hidden relative min-h-[546px] bg-[url('../assets/images/MaskGroup.png')]">
                 <div className="absolute top-4 left-4 text-black-300 p-2 rounded mt-8">
                   <h3 className="text-[12px] font-medium text-[12px] leading-[18px] opacity-80">
                     Accessories + Food Combo
@@ -125,7 +125,7 @@ const VeterinarySection = () => {
                   <ButtonmdRounded title={"Order Now"} />
                 </div>
                 <Image
-                  src="/images/peanutButter.png"
+                  src={PeanutButter}
                   alt="Peanut Butter Cookies"
                   width={300}
                   height={300}
@@ -248,8 +248,9 @@ const VeterinarySection = () => {
                     onClick={() => {
                       instanceRef.current?.moveToIdx(idx);
                     }}
-                    className={`w-3 h-3 rounded-full mx-1 ${currentSlide === idx ? "bg-gray-900" : "bg-gray-400"
-                      }`}
+                    className={`w-3 h-3 rounded-full mx-1 ${
+                      currentSlide === idx ? "bg-gray-900" : "bg-gray-400"
+                    }`}
                   ></button>
                 ))}
               </div>

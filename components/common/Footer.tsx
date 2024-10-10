@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Logo from "@/app/img/Logo_Petfood.png";
-import Facebook from "@/app/img/facebook.png";
-import Youtube from "@/app/img/youtube.png";
-import Instagram from "@/app/img/instagram.png";
-import Linkdin from "@/app/img/linkdin.png";
-import Phone from "@/app/img/phone.png";
-import Mail from "@/app/img/mail.png";
+import Logo from "@/assets/images/Logo_Petfood.png";
+import Facebook from "@/assets/images/facebook.png";
+import Youtube from "@/assets/images/youtube.png";
+import Instagram from "@/assets/images/instagram.png";
+import Linkdin from "@/assets/images/linkdin.png";
+import Phone from "@/assets/images/phone.png";
+import Mail from "@/assets/images/mail.png";
 
 const Footer: React.FC = () => {
   const [showServices, setShowServices] = useState(false);

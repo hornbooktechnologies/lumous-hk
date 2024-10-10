@@ -1,54 +1,7 @@
 "use client";
 import React from "react";
 import ProductCard from "@/components/common/ProductCard";
-
-const products = [
-  {
-    image: "/images/product4.png",
-    title: "Homestead Turkey & Ancient Grains Dry Dog Food",
-    price: "$35.99",
-    oldPrice: "$42.99",
-    rating: 3,
-  },
-  {
-    image: "/images/product5.png",
-    title: "Homestead Turkey & Ancient Grains Dry Dog Food",
-    price: "$35.99",
-    oldPrice: "$42.99",
-    rating: 3,
-    discount: "20%",
-  },
-  {
-    image: "/images/product1.png",
-    title: "Homestead Turkey & Ancient Grains Dry Dog Food",
-    price: "$35.99",
-    oldPrice: "$42.99",
-    rating: 4,
-  },
-  {
-    image: "/images/product2.png",
-    title: "Homestead Turkey & Ancient Grains Dry Dog Food",
-    price: "$35.99",
-    oldPrice: "$42.99",
-    rating: 3,
-    discount: "20%",
-  },
-  {
-    image: "/images/product3.png",
-    title: "Homestead Turkey & Ancient Grains Dry Dog Food",
-    price: "$35.99",
-    oldPrice: "$42.99",
-    rating: 4,
-  },
-  {
-    image: "/images/product1.png",
-    title: "Homestead Turkey & Ancient Grains Dry Dog Food",
-    price: "$35.99",
-    oldPrice: "$42.99",
-    rating: 4,
-    discount: "20%",
-  },
-];
+import { products } from "@/app/constant";
 
 const ProductListSection = () => {
   return (
