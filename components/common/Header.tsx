@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "@/assets/images/Logo_Petfood.png";
+import Logo from "@/assets/images/Logo.png";
 import Heart from "@/assets/images/wishlist.png";
 import User from "@/assets/images/user.png";
-import Bag from "@/assets/images/pet_bag.png";
+import Bag from "@/assets/images/cart.png";
 import FaBars from "@/assets/images/FaBars.png";
 import Search from "@/assets/images/search.png";
 import ArrowDown from "@/assets/images/arrowDown.png";
-import NotificationSlider from "@/components/common/NotifactionSlider";
+import NotificationSlider from "@/components/common/HeaderNotificationSlider";
 
 const Header: React.FC = () => {
   return (

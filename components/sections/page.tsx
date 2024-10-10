@@ -1,24 +1,24 @@
 import React from "react";
-import Features from "./Features";
 import HeroSection from "@/components/sections/HeroSection";
-import VeterinarySection from "@/components/sections/VeterinarySection";
-import ExplorePostSection from "./ExplorePostSection";
-import NewsletterSection from "./NewsletterSection";
-import ProductListSection from "../sections/ProductListSection";
-import ExploreProducts from "../sections/ExploreProducts";
-import PetSlider from "./PetSlider";
+import HealthCareProducts from "@/components/sections/HealthCareProducts";
+import Features from "./Features";
+import ExplorePetPosts from "./ExplorePetPosts";
+import PetNewsletterSubscription from "./PetNewsletterSubscription";
+import ProductListing from "./ProductListing";
+import FeaturedPetProducts from "./FeaturedPetProducts";
+import FeaturedPetProductsSlider from "./FeaturedPetProductsSlider";
 
 const Dashboard: React.FC = () => {
   return (
     <div className="bg-white">
       <HeroSection />
-      <VeterinarySection />
-      <ExploreProducts />
-      <PetSlider />
-      <ProductListSection />
+      <HealthCareProducts />
+      <FeaturedPetProducts />
+      <FeaturedPetProductsSlider />
+      <ProductListing />
       <Features />
-      <ExplorePostSection />
-      <NewsletterSection />
+      <ExplorePetPosts />
+      <PetNewsletterSubscription />
     </div>
   );
 };
