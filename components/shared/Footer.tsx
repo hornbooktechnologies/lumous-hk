@@ -8,41 +8,18 @@ import Instagram from "@/assets/images/instagram.png";
 import Linkdin from "@/assets/images/linkdin.png";
 import Phone from "@/assets/images/phone.png";
 import Mail from "@/assets/images/mail.png";
+import Plus from "@/assets/images/plus.png";
 
 const Footer: React.FC = () => {
   const [showServices, setShowServices] = useState(false);
   const [showPetFood, setShowPetFood] = useState(false);
   return (
     <div className="footer-bg bg-green-100 relative">
-      <style jsx>{`
-        .footer-bg::before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: -83px;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-image: url("/assets/images/footer-bg.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          z-index: 99;
-        }
-        @media (min-width: 1023px) and (max-width: 1440px) {
-          .footer-bg::before {
-            background-position: center;
-          }
-        }
-        @media (max-width: 768px) {
-          .footer-bg::before {
-            background-image: url("/assets/images/footer-mobile-bg.png");
-            background-position: center;
-            background-size: cover;
-          }
-        }
-      `}</style>
-      <div className=" container mx-auto py-10 px-0 lg:py-16 lg:px-20 relative z-[999]">
+     <div className="absolute inset-0 -top-[83px] bg-[url('/images/footer-bg.png')] bg-no-repeat bg-cover z-0 lg:bg-center lg:bg-[length:cover] lg:w-full">
+      </div>
+      <div className="absolute inset-0 -top-[95px] bg-[url('/images/footer-mobile-bg.png')] bg-no-repeat bg-cover bg-center z-0 lg:hidden"></div>
+
+      <div className=" container mx-auto pt-10 px-0 lg:py-16 lg:px-20 relative z-[999]">
         <div className="flex justify-between flex-col lg:flex-row gap-8 px-5 lg:px-0">
           <div className="flex justify-between gap-[50px]">
             <div className="flex-none w-full lg:w-1/3">
@@ -158,11 +135,18 @@ const Footer: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setShowServices(!showServices)}
-              className="w-full flex justify-between items-center px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-900 shadow-sm"
+              className="w-full flex justify-between items-center px-4 py-3 bg-white rounded-md text-gray-900 shadow-sm"
             >
-              <span>Our Service</span>
+              <span className="text-[12px] font-bold text-[#195F6B]">
+                Our Service
+              </span>
               <span className="font-semibold text-lg">
-                {showServices ? "-" : "+"}
+                {/* {showServices ? "-" : "+"} */}
+                <Image
+                  src={Plus}
+                  alt="plus"
+                  className="text-black-300 hover:text-teal-500 cursor-pointer"
+                />
               </span>
             </button>
             {showServices && (
@@ -184,11 +168,19 @@ const Footer: React.FC = () => {
 
             <button
               onClick={() => setShowPetFood(!showPetFood)}
-              className="w-full flex justify-between items-center px-4 py-3 bg-white border border-gray-300 rounded-md mt-4 text-gray-900 shadow-sm"
+              className="w-full flex justify-between items-center px-4 py-3 bg-white rounded-md mt-4 text-gray-900 shadow-sm"
             >
-              <span>Pet Wise Food</span>
+              <span className="text-[12px] font-bold text-[#195F6B]">
+                Pet Wise Food
+              </span>
+
               <span className="font-semibold text-lg">
-                {showPetFood ? "-" : "+"}
+                {/* {showPetFood ? "-" : "+"} */}
+                <Image
+                  src={Plus}
+                  alt="plus"
+                  className="text-black-300 hover:text-teal-500 cursor-pointer"
+                />
               </span>
             </button>
             {showPetFood && (
@@ -257,13 +249,13 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-4 text-gray-900 flex justify-between items-center lg:hidden">
-            <p className="font-bold flex items-center">
+          <div className="mb-4 text-gray-900 flex flex-row gap-3 items-center justify-between lg:hidden w-[85%] md:w-[50%] sm:w-[90%] max-w-[320px] mx-auto">
+            <p className="font-medium flex items-center text-[10px] leading-[15px]">
               <Image src={Mail} className="mr-2 w-4 h-3" alt="Logo" />
               Sayhi@Dubidoo.Com
             </p>
-            <div className="h-[30px] bg-black-50 w-[2px]"></div>
-            <p className="font-bold flex items-center">
+            <div className="h-[30px] bg-black-50 w-[2px] my-2"></div>
+            <p className="font-medium flex items-center text-[10px] leading-[15px]">
               <Image src={Phone} className="mr-2 w-4 h-3" alt="Logo" />
               (252) 555-0126
             </p>
@@ -271,7 +263,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-teal-800 text-white text-center py-4 text-xs lg:text-base">
+      <div className="relative bg-teal-800 text-white text-center py-4 text-xs lg:text-base">
         <ul className="flex justify-center space-x-6">
           <li className="cursor-pointer hover:underline">Privacy Policy</li>
           <li className="cursor-pointer hover:underline w-[1px] bg-white"></li>

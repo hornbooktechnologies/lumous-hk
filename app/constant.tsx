@@ -8,7 +8,6 @@ import product5 from "@/assets/images/product5.png";
 import product1 from "@/assets/images/product1.png";
 import product2 from "@/assets/images/product2.png";
 import product3 from "@/assets/images/product3.png";
-import MaskGroup from "@/assets/images/Mask-Group.png";
 import KevinMueller from "@/assets/images/bright-parrot-on-branch.png";
 import PetAccesories from "@/assets/images/dog-toys-and-food-bowl-background.png";
 import Mouse from "@/assets/images/mouse.png";
@@ -73,23 +72,23 @@ export const products = [
 
 export const sliderData = [
   {
-    img: MaskGroup,
+    img: '/images/Mask-Group.png',
     btnText: "FOR DOGS & DOGS LOVER",
     btnClass: "",
   },
   {
-    img: KevinMueller,
+    img: '/images/bright-parrot-on-branch.png',
     btnText: "BIRDS LOVER",
     btnClass: "!text-white !border-white",
   },
-  { img: PetAccesories, btnText: "PET ACCESORIES", btnClass: "" },
-  { img: Mouse, btnText: "HEMI & RAT TA TAT", btnClass: "" },
+  { img: '/images/dog-toys-and-food-bowl-background.png', btnText: "PET ACCESORIES", btnClass: "" },
+  { img: '/images/mouse.png', btnText: "HEMI & RAT TA TAT", btnClass: "" },
   {
-    img: Meow,
+    img: '/images/cat-with-plants.png',
     btnText: "MEOW MEOW",
     btnClass: "!text-white !border-white",
   },
-  { img: NewBornSlider, btnText: "FOR NEW BORN", btnClass: "" },
+  { img: '/images/dog-food-and-leash.png', btnText: "FOR NEW BORN", btnClass: "" },
 ];
 
 export const NotificationSliderData = [

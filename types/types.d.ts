@@ -22,7 +22,7 @@ export interface IExploreCardProps {
   multiData?: boolean;
 }
 
-export interface ProductCardProps {
+export interface IProductShowcaseProps {
   image: StaticImageData;
   title: string;
   price: string | number;

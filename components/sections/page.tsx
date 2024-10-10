@@ -2,9 +2,9 @@ import React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import HealthCareProducts from "@/components/sections/HealthCareProducts";
 import Features from "./Features";
-import ExplorePetPosts from "./ExplorePetPosts";
+import PetCommunityShowcase from "./PetCommunityShowcase";
 import PetNewsletterSubscription from "./PetNewsletterSubscription";
-import ProductListing from "./ProductListing";
+import BestSellingProducts from "./BestSellingProducts";
 import FeaturedPetProducts from "./FeaturedPetProducts";
 import FeaturedPetProductsSlider from "./FeaturedPetProductsSlider";
 
@@ -15,9 +15,9 @@ const Dashboard: React.FC = () => {
       <HealthCareProducts />
       <FeaturedPetProducts />
       <FeaturedPetProductsSlider />
-      <ProductListing />
+      <BestSellingProducts />
       <Features />
-      <ExplorePetPosts />
+      <PetCommunityShowcase />
       <PetNewsletterSubscription />
     </div>
   );

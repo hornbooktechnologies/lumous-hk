@@ -7,9 +7,9 @@ import PuppiesInPajamas from "@/assets/images/puppies-in-pajamas.png";
 import DogBoneTreatsInBowl from "@/assets/images/dog-bone-treats-in-bowl.png";
 import PuppyInDuckPajamas from "@/assets/images/puppy-in-duck-pajamas.png";
 
-import ExploreCard from "../common/ExploreCard";
+import ExploreCard from "../shared/ExploreCard";
 
-const ExplorePetPosts = () => {
+const PetCommunityShowcase = () => {
   return (
     <div className="px-6 py-16 lg:px-20 bg-white">
       <div className="container mx-auto">
@@ -66,4 +66,4 @@ const ExplorePetPosts = () => {
   );
 };
 
-export default ExplorePetPosts;
+export default PetCommunityShowcase;

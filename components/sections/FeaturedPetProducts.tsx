@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FullRoundedButton } from "@/components/common/ButtonmdRounded";
+import { FullRoundedButton } from "@/components/shared/ButtonmdRounded";
 import DogFoodBanner from "@/assets/images/premium-organic-dog-food-banner.png";
 
 const FeaturedPetProducts = () => {
@@ -9,7 +9,7 @@ const FeaturedPetProducts = () => {
     <div className="mx-auto py-8 mt-8 max-w-8xl">
       <div
         className="relative hidden w-full h-[600px] bg-center bg-cover lg:block"
-        style={{ backgroundImage: "url('/assets/images/banner.png')" }}
+        style={{ backgroundImage: "url('/images/banner.png')" }}
       >
         <div className="h-full flex items-center justify-end pr-16">
           <div className="space-y-6 max-w-md text-right">

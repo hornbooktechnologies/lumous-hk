@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FullRoundedButton } from "@/components/common/ButtonmdRounded";
+import { FullRoundedButton } from "@/components/shared/ButtonmdRounded";
 import { HeroSectionSliderData } from "@/app/constant";
 
 const HeroSection = () => {

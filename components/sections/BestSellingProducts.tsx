@@ -1,8 +1,8 @@
 import React from "react";
 import { products } from "@/app/constant";
-import ProductCard from "@/components/common/ProductCard";
+import ProductShowcase from "@/components/shared/ProductShowcase";
 
-const ProductListing = () => {
+const BestSellingProducts = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
       <div className="mb-10 flex items-center justify-between lg:mb-16">
@@ -25,7 +25,7 @@ const ProductListing = () => {
       <div className="scrollbar-custom max-w-full overflow-x-auto lg:mt-4">
         <div className="flex space-x-4">
           {products.map((product, index) => (
-            <ProductCard key={index} {...product} />
+            <ProductShowcase key={index} {...product} />
           ))}
         </div>
         <br />
@@ -34,4 +34,4 @@ const ProductListing = () => {
   );
 };
 
-export default ProductListing;
+export default BestSellingProducts;
