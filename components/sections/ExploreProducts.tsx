@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { ButtonFullRounded } from "@/components/common/ButtonmdRounded";
-import bannermb from "@/assets/images/bannermb.png";
+import DogFoodBanner from "@/assets/images/premium-organic-dog-food-banner.png";
 
 const ExploreProducts = () => {
   return (
@@ -28,7 +28,7 @@ const ExploreProducts = () => {
 
       <div className="lg:hidden">
         <Image
-          src={bannermb}
+          src={DogFoodBanner}
           alt="Banner Image"
           className="rounded-lg object-cover w-full"
         />
