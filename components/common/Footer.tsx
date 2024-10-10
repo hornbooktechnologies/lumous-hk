@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Logo from "@/assets/images/Logo_Petfood.png";
+import Logo from "@/assets/images/Logo.png";
 import Facebook from "@/assets/images/facebook.png";
 import Youtube from "@/assets/images/youtube.png";
 import Instagram from "@/assets/images/instagram.png";
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background-image: url("/images/footer-bg.png");
+          background-image: url("/assets/images/footer-bg.png");
           background-repeat: no-repeat;
           background-size: cover;
           z-index: 99;
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         }
         @media (max-width: 768px) {
           .footer-bg::before {
-            background-image: url("/images/footer-mobile-bg.png");
+            background-image: url("/assets/images/footer-mobile-bg.png");
             background-position: center;
             background-size: cover;
           }

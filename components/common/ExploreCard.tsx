@@ -1,43 +1,38 @@
 import React from "react";
-import Image from "next/image";
+import { IExploreCardProps } from "@/types/types";
 import Instagram from "@/assets/images/instagram-color.png";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import defaultImage from "@/assets/images/no-image.png";
+import Image from "next/image";
 
-interface ExploreCardProps {
-  img?: string | StaticImport;
-  multiData?: boolean;
-}
-
-const ExploreCard: React.FC<ExploreCardProps> = ({
+const ExploreCard: React.FC<IExploreCardProps> = ({
   img,
   multiData = false,
 }) => {
   return (
-    <div className="bg-white rounded-lg overflow-hidden flex flex-col w-[300px] lg:w-full">
+    <div className="w-[300px] lg:w-full bg-white rounded-lg flex flex-col overflow-hidden">
       <Image
         src={img || defaultImage}
         alt="Post Image"
-        className="w-full object-cover"
+        className="object-cover w-full"
       />
       <div className="p-4">
         {!multiData && (
-          <p className="text-black-300 text-sm mb-2">
+          <p className="mb-2 text-sm text-black-300">
             Simply tag <span className="font-bold">@pet food</span> in your
             caption on Instagram or Twitter to be featured on our website.
           </p>
         )}
         <div className="flex justify-between">
           <div>
-            <p className="text-gray-900 font-semibold text-sm">
+            <p className="text-sm font-semibold text-gray-900">
               Instagram User
             </p>
-            <p className="text-gray-500 text-xs">48 min ago</p>
+            <p className="text-xs text-gray-500">48 min ago</p>
           </div>
           <Image
             src={Instagram}
             alt="Instagram"
-            className="text-pink-600 text-xl mt-2 w-8 h-8"
+            className="mt-2 w-8 h-8 text-xl text-pink-600"
           />
         </div>
       </div>

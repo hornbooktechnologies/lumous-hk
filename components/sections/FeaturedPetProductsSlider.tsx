@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ButtonOutline } from "@/components/common/ButtonmdRounded";
+import { OutlinedButton } from "@/components/common/ButtonmdRounded";
 import Image from "next/image";
 import RightArrow from "@/assets/images/thin_long_right.png";
 import { sliderData } from "@/app/constant";
 
-const PetSlider = () => {
+const FeaturedPetProductsSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const settings = {
@@ -35,27 +35,27 @@ const PetSlider = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center px-10 lg:px-64 text-[#112025] mt-10 mb-6">
+      <div className="mt-10 mb-6 flex justify-between items-center px-10 lg:px-64 text-[#112025]">
         <div>
-          <p className="text-2xl font-semibold">Everything Your</p>
+          <p className="font-semibold text-2xl">Everything Your</p>
           <p className="text-3xl font-bold text-[#16BAC6]">Pet Needs</p>
         </div>
-        <div className="cursor-pointer flex">
+        <div className="flex cursor-pointer">
           View All Products
           <Image
             src={RightArrow}
             alt="User Account"
-            className="cursor-pointer ml-2"
+            className="ml-2 cursor-pointer"
           />
         </div>
       </div>
 
-      <div className="slider-container relative overflow-hidden pet-slider">
+      <div className="relative overflow-hidden pet-slider slider-container">
         <Slider {...settings}>
           {sliderData.map((item, index) => (
             <div key={index} className="relative">
               <div
-                className={`w-full h-[300px] lg:h-[500px] overflow-hidden rounded-lg transition-transform duration-500 transform ${
+                className={`w-full h-[300px] lg:h-[500px] rounded-lg overflow-hidden transform transition-transform duration-500 ${
                   index === activeSlide ? "scale-105" : "scale-90 blur-[2px]"
                 }`}
                 style={{
@@ -64,8 +64,8 @@ const PetSlider = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute top-5 inset-x-0 bg-black bg-opacity-30 flex items-center justify-center">
-                  <ButtonOutline
+                <div className="absolute inset-x-0 top-5 flex items-center justify-center bg-black bg-opacity-30">
+                  <OutlinedButton
                     title={item.btnText}
                     className={`${item.btnClass} uppercase`}
                   />
@@ -79,4 +79,4 @@ const PetSlider = () => {
   );
 };
 
-export default PetSlider;
+export default FeaturedPetProductsSlider;

@@ -1,19 +1,19 @@
 "use client";
 import React from "react";
-import Slider, { CustomArrowProps } from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import LeftArrow from "@/assets/images/left-arrow.png";
-import RightArrow from "@/assets/images/right-arrow.png";
 import Image from "next/image";
+import Slider, { CustomArrowProps } from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import RightArrow from "@/assets/images/right-arrow.png";
+import LeftArrow from "@/assets/images/left-arrow.png";
 import { NotificationSliderData } from "@/app/constant";
 
-const NotificationSlider = () => {
+const HeaderNotificationSlider = () => {
   function SampleNextArrow(props: CustomArrowProps) {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} custom-arrow !right-[50px] lg:!right-[450px] !top-[65%]`}
+        className={`${className} !top-[65%] custom-arrow !right-[50px] lg:!right-[450px]`}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -26,7 +26,7 @@ const NotificationSlider = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} custom-arrow !left-[50px] lg:!left-[450px] !top-[65%]`}
+        className={`${className} !top-[65%] custom-arrow !left-[50px] lg:!left-[450px]`}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -44,12 +44,12 @@ const NotificationSlider = () => {
   };
 
   return (
-    <div className="slider-container overflow-hidden bg-teal-800 text-white text-center py-2 text-sm notification-slider">
+    <div className="notification-slider overflow-hidden slider-container bg-teal-800 text-center text-white py-2 text-sm">
       <Slider {...settings}>
         {NotificationSliderData.map((item, index) => (
           <div
             key={index}
-            className="text-[8px] leading-[12px] tracking-[0.02em] lg:font-semibold lg:text-[14px] lg:leading-[21px] lg:tracking-[0.02em]"
+            className="text-[8px] leading-[12px] lg:text-[14px] lg:font-semibold lg:leading-[21px] tracking-[0.02em] lg:tracking-[0.02em]"
           >
             {item.text}
           </div>
@@ -59,4 +59,4 @@ const NotificationSlider = () => {
   );
 };
 
-export default NotificationSlider;
+export default HeaderNotificationSlider;

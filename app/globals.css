@@ -57,7 +57,7 @@ input[type="checkbox"].custom-checkbox:checked:after {
   background-image: url("../assets/images/bg-image.png");
 }
 .hero-bg {
-  background-image: url("../assets/images/heroSection.png");
+  background-image: url("../assets/images/hero-section.png");
   background-position: center;
   background-size: cover;
 }

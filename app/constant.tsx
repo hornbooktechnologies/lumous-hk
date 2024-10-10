@@ -9,11 +9,11 @@ import product1 from "@/assets/images/product1.png";
 import product2 from "@/assets/images/product2.png";
 import product3 from "@/assets/images/product3.png";
 import MaskGroup from "@/assets/images/Mask-Group.png";
-import KevinMueller from "@/assets/images/kevin-mueller.png";
-import PetAccesories from "@/assets/images/xBOUOuCjAg.png";
+import KevinMueller from "@/assets/images/bright-parrot-on-branch.png";
+import PetAccesories from "@/assets/images/dog-toys-and-food-bowl-background.png";
 import Mouse from "@/assets/images/mouse.png";
-import Meow from "@/assets/images/maxwell-ingham.png";
-import NewBornSlider from "@/assets/images/MaskGroup.png";
+import Meow from "@/assets/images/cat-with-plants.png";
+import NewBornSlider from "@/assets/images/dog-food-and-leash.png";
 
 export const tabs = [
   { name: "cat", icon: Cat },

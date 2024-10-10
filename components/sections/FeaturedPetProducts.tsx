@@ -1,27 +1,27 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { ButtonFullRounded } from "@/components/common/ButtonmdRounded";
+import { FullRoundedButton } from "@/components/common/ButtonmdRounded";
 import DogFoodBanner from "@/assets/images/premium-organic-dog-food-banner.png";
 
-const ExploreProducts = () => {
+const FeaturedPetProducts = () => {
   return (
-    <div className="max-w-8xl mx-auto py-8 mt-8">
+    <div className="mx-auto py-8 mt-8 max-w-8xl">
       <div
-        className="relative w-full h-[600px] bg-cover bg-center hidden lg:block"
+        className="relative hidden w-full h-[600px] bg-center bg-cover lg:block"
         style={{ backgroundImage: "url('/assets/images/banner.png')" }}
       >
-        <div className="flex items-center justify-end h-full pr-16">
-          <div className="max-w-md text-right space-y-6">
-            <h1 className="text-[36px] font-bold text-black-300 text-left">
+        <div className="h-full flex items-center justify-end pr-16">
+          <div className="space-y-6 max-w-md text-right">
+            <h1 className="text-[36px] font-bold text-left text-black-300">
               Dogs do speak, but only to those who know how to listen.
             </h1>
-            <p className="text-[14px] text-black-300 font-normal text-left">
+            <p className="text-left font-normal text-[14px] text-black-300">
               Sweet roll ice cream powder candy canes ice cream donut pudding
               biscuit ice cream. Cupcake tootsie roll sugar plum danish pudding
               fruitcake cheesecake.
             </p>
-            <ButtonFullRounded title={"EXPLORE NOW"} />
+            <FullRoundedButton title={"EXPLORE NOW"} />
           </div>
         </div>
       </div>
@@ -30,19 +30,19 @@ const ExploreProducts = () => {
         <Image
           src={DogFoodBanner}
           alt="Banner Image"
-          className="rounded-lg object-cover w-full"
+          className="w-full rounded-lg object-cover"
         />
         <div className="px-4 mt-4">
-          <h1 className="text-[16px] font-bold text-black-300 text-left pr-10">
+          <h1 className="pr-10 text-left text-[16px] font-bold text-black-300">
             Dogs do speak, but only to those who know how to listen.
           </h1>
-          <p className="text-[10px] text-black-300 font-normal text-left pr-8">
+          <p className="pr-8 text-left text-[10px] font-normal text-black-300">
             Sweet roll ice cream powder candy canes ice cream donut pudding
             biscuit ice cream. Cupcake tootsie roll sugar plum danish pudding
             fruitcake cheesecake.
           </p>
-          <div className="flex lg:justify-center mt-4 uppercase">
-            <ButtonFullRounded title={"Explore Now"} />
+          <div className="flex mt-4 lg:justify-center uppercase">
+            <FullRoundedButton title={"Explore Now"} />
           </div>
         </div>
       </div>
@@ -50,4 +50,4 @@ const ExploreProducts = () => {
   );
 };
 
-export default ExploreProducts;
+export default FeaturedPetProducts;
