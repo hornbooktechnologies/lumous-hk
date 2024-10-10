@@ -1,5 +1,5 @@
 import React from "react";
-import FeaturesSection from "./FeaturesSection";
+import Features from "./Features";
 import HeroSection from "@/components/sections/HeroSection";
 import VeterinarySection from "@/components/sections/VeterinarySection";
 import ExplorePostSection from "./ExplorePostSection";
@@ -16,7 +16,7 @@ const Dashboard: React.FC = () => {
       <ExploreProducts />
       <PetSlider />
       <ProductListSection />
-      <FeaturesSection />
+      <Features />
       <ExplorePostSection />
       <NewsletterSection />
     </div>
