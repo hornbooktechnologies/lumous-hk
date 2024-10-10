@@ -5,31 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ButtonOutline } from "@/components/common/ButtonmdRounded";
 import Image from "next/image";
-import RightArrow from "@/app/img/thin_long_right.png";
+import RightArrow from "@/assets/images/thin_long_right.png";
+import { sliderData } from "@/app/constant";
 
 const PetSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-
-  const sliderData = [
-    {
-      img: "/images/Mask-Group.png",
-      btnText: "FOR DOGS & DOGS LOVER",
-      btnClass: "",
-    },
-    {
-      img: "/images/kevin-mueller.png",
-      btnText: "BIRDS LOVER",
-      btnClass: "!text-white !border-white",
-    },
-    { img: "/images/xBOUOuCjAg.png", btnText: "PET ACCESORIES", btnClass: "" },
-    { img: "/images/mouse.png", btnText: "HEMI & RAT TA TAT", btnClass: "" },
-    {
-      img: "/images/maxwell-ingham.png",
-      btnText: "MEOW MEOW",
-      btnClass: "!text-white !border-white",
-    },
-    { img: "/images/MaskGroup.png", btnText: "FOR NEW BORN", btnClass: "" },
-  ];
 
   const settings = {
     className: "center",

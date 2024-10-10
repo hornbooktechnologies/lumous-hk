@@ -54,10 +54,10 @@ input[type="checkbox"].custom-checkbox:checked:after {
   justify-content: center;
 }
 .feature-bg {
-  background-image: url("./img/image 91.png");
+  background-image: url("../assets/images/image 91.png");
 }
 .hero-bg {
-  background-image: url("./img/heroSection.png");
+  background-image: url("../assets/images/heroSection.png");
   background-position: center;
   background-size: cover;
 }

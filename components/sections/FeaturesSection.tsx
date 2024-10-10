@@ -1,7 +1,7 @@
 import React from 'react';
-import Tree from '@/app/img/Vector 164.png';
-import Truck from '@/app/img/Group 5719.png';
-import Flexible from '@/app/img/Order@1x.png';
+import Tree from '@/assets/images/Vector 164.png';
+import Truck from '@/assets/images/Group 5719.png';
+import Flexible from '@/assets/images/Order@1x.png';
 import FeatureCard from '../common/FeatureCard';
 
 const FeaturesSection = () => {

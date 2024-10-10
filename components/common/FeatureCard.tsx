@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import defaultImage from "@/app/img/no-image.png";
+import defaultImage from "@/assets/images/no-image.png";
 
 interface FeatureCardProps {
   title?: string;

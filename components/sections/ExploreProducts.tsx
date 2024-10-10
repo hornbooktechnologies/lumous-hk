@@ -9,7 +9,7 @@ const ExploreProducts = () => {
     <div className="max-w-8xl mx-auto py-8 mt-8">
       <div
         className="relative w-full h-[600px] bg-cover bg-center hidden lg:block"
-        style={{ backgroundImage: "url('/images/banner.png')" }}
+        style={{ backgroundImage: "url('/assets/images/banner.png')" }}
       >
         <div className="flex items-center justify-end h-full pr-16">
           <div className="max-w-md text-right space-y-6">

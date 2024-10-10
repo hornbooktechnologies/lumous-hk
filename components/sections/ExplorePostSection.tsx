@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Instagram from "@/app/img/instagram-color.png";
-import Heart from "@/app/img/heart_fill.png";
-import Reactangle from "@/app/img/Rectangle-1.png";
-import Reactangle1 from "@/app/img/Rectangle-2.png";
-import Reactangle2 from "@/app/img/Rectangle-3.png";
-import Reactangle3 from "@/app/img/Rectangle-4.png";
+import Instagram from "@/assets/images/instagram-color.png";
+import Heart from "@/assets/images/heart_fill.png";
+import Reactangle from "@/assets/images/Rectangle-1.png";
+import Reactangle1 from "@/assets/images/Rectangle-2.png";
+import Reactangle2 from "@/assets/images/Rectangle-3.png";
+import Reactangle3 from "@/assets/images/Rectangle-4.png";
 import ExploreCard from "../common/ExploreCard";
 
 const ExplorePostSection = () => {
