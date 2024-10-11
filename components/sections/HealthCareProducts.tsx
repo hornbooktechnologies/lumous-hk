@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { FullRoundedButton, MediumRoundedButton } from "../common/ButtonmdRounded";
+import { FullRoundedButton, MediumRoundedButton } from "../shared/ButtonmdRounded";
 import orderNow from "@/assets/images/orderNow.png";
 import Ellen from "@/assets/images/ellen-and-co-peanut-butter-treats.png";
 import PeanutButter from "@/assets/images/peanut-butter.png";
@@ -59,12 +59,12 @@ const HealthCareProducts = () => {
         ))}
       </div>
 
-      <div className="lg:hidden flex justify-between w-full px-5 mb-5 overflow-auto">
+      <div className="lg:hidden flex gap-2.5 justify-between w-full px-5 mb-5 overflow-auto">
         {tabs.map((tab, index) => (
           <button
             key={index + 1}
             onClick={() => setActiveTab(tab.name)}
-            className={`flex items-center justify-center py-2.5 px-5 rounded-xl lg:rounded ${
+            className={`flex flex-col items-center justify-center py-2.5 px-5 rounded-xl lg:rounded ${
               activeTab === tab.name ? "bg-[#112025]" : "bg-gray-50"
             }`}
           >
@@ -78,7 +78,7 @@ const HealthCareProducts = () => {
               />
             </div>
             <span
-              className={`font-medium text-[10px] leading-[15px] tracking-[0.02em] ${
+              className={`font-medium text-[10px] leading-[15px] tracking-[0.02em] w-max ${
                 activeTab === tab.name ? "text-white" : "text-black-300"
               }`}
             >
@@ -160,75 +160,75 @@ const HealthCareProducts = () => {
           </div>
           {/* Mobile Version */}
           <div className="flex flex-col lg:hidden">
-            <div ref={sliderRef} className="keen-slider">
-              <div className="keen-slider__slide flex-auto relative">
-                <div className="relative bg-[url('/images/dog-food-and-leash.png')] min-h-[546px] rounded-lg overflow-hidden">
-                  <div className="absolute top-4 left-4 p-2 text-black-300 rounded mt-8">
-                    <h3 className="text-[12px]">Accessories + Food Combo</h3>
-                    <p className="text-[16px] uppercase pr-52 text-semibold">
-                      Ofcourse We Sale Product With Love
-                    </p>
-                    <MediumRoundedButton title={"Order Now"} />
-                  </div>
-                </div>
-              </div>
+          <div ref={sliderRef} className="flex space-x-4 overflow-x-auto scrollbar-hide">
+    <div className="flex-none w-[300px] relative">
+      <div className="relative bg-[url('/images/dog-food-and-leash.png')] min-h-[546px] rounded-lg overflow-hidden">
+        <div className="absolute top-4 left-4 p-2 text-black-300 rounded mt-8">
+          <h3 className="text-[12px]">Accessories + Food Combo</h3>
+          <p className="text-[16px] uppercase pr-52 text-semibold">
+            Ofcourse We Sale Product With Love
+          </p>
+          <MediumRoundedButton title={"Order Now"} />
+        </div>
+      </div>
+    </div>
 
-              <div className="keen-slider__slide relative flex-auto">
-                <div className="min-h-[546px] bg-[#FFC15B] relative rounded-lg overflow-hidden">
-                  <div className="top-4 left-4 mt-8 text-center text-black-300 p-2 rounded">
-                    <h3 className="uppercase font-bold text-[16px] px-20">
-                      Peanut Butter Cookies
-                    </h3>
-                    <p className="text-[12px] px-20">
-                      Lectus commodo pharetra, sit aliquam tristique neque in.
-                    </p>
-                    <MediumRoundedButton title={"Order Now"} />
-                  </div>
-                  <Image
-                    src="/images/peanut-butter.png"
-                    alt="Peanut Butter Cookies"
-                    width={300}
-                    height={300}
-                    className="w-full object-cover rounded-lg"
-                  />
-                </div>
-              </div>
+    <div className="flex-none w-[300px] relative">
+      <div className="min-h-[546px] bg-[#FFC15B] relative rounded-lg overflow-hidden">
+        <div className="top-4 left-4 mt-8 text-center text-black-300 p-2 rounded">
+          <h3 className="uppercase font-bold text-[16px] px-20">
+            Peanut Butter Cookies
+          </h3>
+          <p className="text-[12px] px-20">
+            Lectus commodo pharetra, sit aliquam tristique neque in.
+          </p>
+          <MediumRoundedButton title={"Order Now"} />
+        </div>
+        <Image
+          src="/images/peanut-butter.png"
+          alt="Peanut Butter Cookies"
+          width={300}
+          height={300}
+          className="w-full object-cover rounded-lg"
+        />
+      </div>
+    </div>
 
-              <div className="keen-slider__slide flex flex-col overflow-hidden rounded-lg border border-[#16BAC6]">
-                <div className="p-3 top-4 left-4 rounded text-black-300">
-                  <h3 className="mt-2 font-medium text-[12px]">Axel & Blue</h3>
-                  <p className="mt-2 font-semibold text-[16px]">
-                    Made From The Real Chocolate Ingredient
-                  </p>
-                  <FullRoundedButton title={"Order Now"} />
-                </div>
-                <Image
-                  src="/images/orderNow.png"
-                  alt="Food Image 1"
-                  width={200}
-                  height={150}
-                  className="w-full object-cover rounded-lg"
-                />
-              </div>
+    <div className="flex-none w-[300px] flex flex-col overflow-hidden rounded-lg border border-[#16BAC6]">
+      <div className="p-3 top-4 left-4 rounded text-black-300">
+        <h3 className="mt-2 font-medium text-[12px]">Axel & Blue</h3>
+        <p className="mt-2 font-semibold text-[16px]">
+          Made From The Real Chocolate Ingredient
+        </p>
+        <FullRoundedButton title={"Order Now"} />
+      </div>
+      <Image
+        src="/images/orderNow.png"
+        alt="Food Image 1"
+        width={200}
+        height={150}
+        className="w-full object-cover rounded-lg"
+      />
+    </div>
 
-              <div className="keen-slider__slide flex flex-col overflow-hidden rounded-lg bg-[#D5EFF9]">
-                <div className="ml-2 top-4 left-4 p-3 !pr-0 rounded text-black-300">
-                  <h3 className="mt-2 font-medium text-[12px]">Axel & Blue</h3>
-                  <p className="mt-2 font-semibold text-[16px]">
-                    Made From The Real Chocolate Ingredient
-                  </p>
-                  <FullRoundedButton title={"Order Now"} />
-                </div>
-                <Image
-                  src="/images/ellen-and-co-peanut-butter-treats.png"
-                  alt="Food Image 2"
-                  width={200}
-                  height={150}
-                  className="w-full object-cover rounded-lg"
-                />
-              </div>
-            </div>
-            {loaded && instanceRef.current && (
+    <div className="flex-none w-[300px] flex flex-col overflow-hidden rounded-lg bg-[#D5EFF9]">
+      <div className="ml-2 top-4 left-4 p-3 !pr-0 rounded text-black-300">
+        <h3 className="mt-2 font-medium text-[12px]">Axel & Blue</h3>
+        <p className="mt-2 font-semibold text-[16px]">
+          Made From The Real Chocolate Ingredient
+        </p>
+        <FullRoundedButton title={"Order Now"} />
+      </div>
+      <Image
+        src="/images/ellen-and-co-peanut-butter-treats.png"
+        alt="Food Image 2"
+        width={200}
+        height={150}
+        className="w-full object-cover rounded-lg"
+      />
+    </div>
+  </div>
+            {/* {loaded && instanceRef.current && (
               <div className="flex space-x-2 justify-center mt-5 pl-5 lg:pl-0">
                 {[
                   ...Array(
@@ -246,7 +246,7 @@ const HealthCareProducts = () => {
                   ></button>
                 ))}
               </div>
-            )}
+            )} */}
           </div>
         </>
       )}

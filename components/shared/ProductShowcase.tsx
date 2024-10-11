@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { ProductCardProps } from "@/types/types";
+import { IProductShowcaseProps } from "@/types/types";
 import StarIcon from "./StarIcon";
 
-const ProductCard: React.FC<ProductCardProps> = ({
+const ProductShowcase: React.FC<IProductShowcaseProps> = ({
   image,
   title,
   price,
@@ -52,4 +52,4 @@ const ProductCard: React.FC<ProductCardProps> = ({
   );
 };
 
-export default ProductCard;
+export default ProductShowcase;

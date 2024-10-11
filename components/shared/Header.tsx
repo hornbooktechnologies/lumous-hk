@@ -7,7 +7,7 @@ import Bag from "@/assets/images/cart.png";
 import FaBars from "@/assets/images/FaBars.png";
 import Search from "@/assets/images/search.png";
 import ArrowDown from "@/assets/images/arrowDown.png";
-import NotificationSlider from "@/components/common/HeaderNotificationSlider";
+import NotificationSlider from "@/components/shared/HeaderNotificationSlider";
 
 const Header: React.FC = () => {
   return (
