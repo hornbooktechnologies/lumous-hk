@@ -1,27 +1,82 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
-import { FullRoundedButton, MediumRoundedButton } from "../shared/ButtonmdRounded";
+import {
+  FullRoundedButton,
+  MediumRoundedButton,
+} from "../shared/ButtonmdRounded";
 import orderNow from "@/assets/images/orderNow.png";
 import Ellen from "@/assets/images/ellen-and-co-peanut-butter-treats.png";
 import PeanutButter from "@/assets/images/peanut-butter.png";
+import DogFood from "@/assets/images/dog-food-and-leash.png";
 import { tabs } from "@/app/constant";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HealthCareProducts = () => {
   const [activeTab, setActiveTab] = useState("dog");
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const [sliderRef, instanceRef] = useKeenSlider({
-    initial: 0,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isTabletScreen, setIsTabletScreen] = useState(false);
+
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth <= 536);
+    setIsTabletScreen(window.innerWidth > 536 && window.innerWidth <= 736);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
+  const settings = {
+    className: "center",
+    dots: true,
+    infinite: false,
+    slidesToShow: 1,
+    speed: 500,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    arrows: true,
+    centerPadding: "30px",
+    centerMode: true,
+    appendDots: (dots: any) => (
+      <div
+        className="custom-appendDots"
+        style={{
+          padding: "15px",
+          marginTop: "25px",
+          bottom: isSmallScreen ? "3px" : isTabletScreen ? "10px" : "-15px",
+          right: isTabletScreen ? "35%" : "0%",
+        }}
+      >
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: (i: any) => {
+      const dotSize = isSmallScreen ? "5px" : isTabletScreen ? "7px" : "10px";
+      const marginSpacing = isSmallScreen
+        ? "0 3px"
+        : isTabletScreen
+        ? "0 4px"
+        : "0 5px";
+      return (
+        <div
+          style={{
+            width: dotSize,
+            height: dotSize,
+            borderRadius: "50%",
+            backgroundColor: "#666666",
+            display: "inline-block",
+            margin: marginSpacing,
+          }}
+        />
+      );
     },
-    created() {
-      setLoaded(true);
-    },
-  });
+  };
 
   return (
     <div className="py-8 max-w-7xl mx-auto px-15">
@@ -49,10 +104,16 @@ const HealthCareProducts = () => {
                 alt={tab.name}
                 width={24}
                 height={24}
-                className={`w-full h-full ${activeTab === tab.name ? "filter invert" : ""}`}
+                className={`w-full h-full ${
+                  activeTab === tab.name ? "filter invert" : ""
+                }`}
               />
             </div>
-            <span className={`uppercase ${activeTab === tab.name ? "text-white" : "text-black-300"}`}>
+            <span
+              className={`uppercase ${
+                activeTab === tab.name ? "text-white" : "text-black-300"
+              }`}
+            >
               {tab.name}
             </span>
           </button>
@@ -74,7 +135,9 @@ const HealthCareProducts = () => {
                 alt={tab.name}
                 width={24}
                 height={24}
-                className={`w-full h-full ${activeTab === tab.name ? "filter invert" : ""}`}
+                className={`w-full h-full ${
+                  activeTab === tab.name ? "filter invert" : ""
+                }`}
               />
             </div>
             <span
@@ -158,95 +221,95 @@ const HealthCareProducts = () => {
               </div>
             </div>
           </div>
+
           {/* Mobile Version */}
           <div className="flex flex-col lg:hidden">
-          <div ref={sliderRef} className="flex space-x-4 overflow-x-auto scrollbar-hide">
-    <div className="flex-none w-[300px] relative">
-      <div className="relative bg-[url('/images/dog-food-and-leash.png')] min-h-[546px] rounded-lg overflow-hidden">
-        <div className="absolute top-4 left-4 p-2 text-black-300 rounded mt-8">
-          <h3 className="text-[12px]">Accessories + Food Combo</h3>
-          <p className="text-[16px] uppercase pr-52 text-semibold">
-            Ofcourse We Sale Product With Love
-          </p>
-          <MediumRoundedButton title={"Order Now"} />
-        </div>
-      </div>
-    </div>
+            <div className="slider-container overflow-hidden test-0">
+              <Slider {...settings}>
+                <div className="!sm:w-[400px] !md:w-auto">
+                  <div className=" relative rounded-lg overflow-hidden">
+                    <div className="absolute top-4 left-4 p-2 text-black-300 rounded mt-8">
+                      <h3 className="text-[12px]">Accessories + Food Combo</h3>
+                      <p className="text-[16px] uppercase pr-52 text-semibold">
+                        Ofcourse We Sale Product With Love
+                      </p>
+                    </div>
+                    <div>
+                    <Image
+                      src={DogFood}
+                      alt="Peanut Butter Cookies"
+                      width={300}
+                      height={400}
+                      className="w-full object-cover rounded-lg test-00"
+                    />
+                    </div>
+                  </div>
+                </div>
 
-    <div className="flex-none w-[300px] relative">
-      <div className="min-h-[546px] bg-[#FFC15B] relative rounded-lg overflow-hidden">
-        <div className="top-4 left-4 mt-8 text-center text-black-300 p-2 rounded">
-          <h3 className="uppercase font-bold text-[16px] px-20">
-            Peanut Butter Cookies
-          </h3>
-          <p className="text-[12px] px-20">
-            Lectus commodo pharetra, sit aliquam tristique neque in.
-          </p>
-          <MediumRoundedButton title={"Order Now"} />
-        </div>
-        <Image
-          src="/images/peanut-butter.png"
-          alt="Peanut Butter Cookies"
-          width={300}
-          height={300}
-          className="w-full object-cover rounded-lg"
-        />
-      </div>
-    </div>
+                <div className="!sm:w-[400px] !md:w-auto ml-4">
+                  <div className="bg-[#FFC15B] relative rounded-lg overflow-hidden">
+                    <div className="top-4 left-4 mt-8 text-center text-black-300 p-2 rounded text-center">
+                      <h3 className="uppercase font-bold text-[16px] px-20">
+                        Peanut Butter Cookies
+                      </h3>
+                      <p className="text-[12px] px-20">
+                        Lectus commodo pharetra, sit aliquam tristique neque in.
+                      </p>
+                    </div>
+                    <div className="flex justify-center">
+                      <Image
+                        src={PeanutButter}
+                        alt="Peanut Butter Cookies"
+                        width={300}
+                        height={250}
+                        className="object-cover rounded-lg test-1"
+                      />
+                    </div>
+                  </div>
+                </div>
 
-    <div className="flex-none w-[300px] flex flex-col overflow-hidden rounded-lg border border-[#16BAC6]">
-      <div className="p-3 top-4 left-4 rounded text-black-300">
-        <h3 className="mt-2 font-medium text-[12px]">Axel & Blue</h3>
-        <p className="mt-2 font-semibold text-[16px]">
-          Made From The Real Chocolate Ingredient
-        </p>
-        <FullRoundedButton title={"Order Now"} />
-      </div>
-      <Image
-        src="/images/orderNow.png"
-        alt="Food Image 1"
-        width={200}
-        height={150}
-        className="w-full object-cover rounded-lg"
-      />
-    </div>
+                <div className="!sm:w-[400px] !md:w-auto ml-4 ">
+                  <div className="p-3 top-4 left-4 rounded text-black-300 text-center">
+                    <h3 className="mt-2 font-medium text-[12px]">
+                      Axel & Blue
+                    </h3>
+                    <p className="mt-2 font-semibold text-[16px]">
+                      Made From The Real Chocolate Ingredient
+                    </p>
+                  </div>
+                  <div className="flex justify-center">
+                    <Image
+                      src={orderNow}
+                      alt="Food Image 1"
+                      width={300}
+                      height={250}
+                      className="object-cover rounded-lg test-1"
+                    />
+                  </div>
+                </div>
 
-    <div className="flex-none w-[300px] flex flex-col overflow-hidden rounded-lg bg-[#D5EFF9]">
-      <div className="ml-2 top-4 left-4 p-3 !pr-0 rounded text-black-300">
-        <h3 className="mt-2 font-medium text-[12px]">Axel & Blue</h3>
-        <p className="mt-2 font-semibold text-[16px]">
-          Made From The Real Chocolate Ingredient
-        </p>
-        <FullRoundedButton title={"Order Now"} />
-      </div>
-      <Image
-        src="/images/ellen-and-co-peanut-butter-treats.png"
-        alt="Food Image 2"
-        width={200}
-        height={150}
-        className="w-full object-cover rounded-lg"
-      />
-    </div>
-  </div>
-            {/* {loaded && instanceRef.current && (
-              <div className="flex space-x-2 justify-center mt-5 pl-5 lg:pl-0">
-                {[
-                  ...Array(
-                    instanceRef.current.track.details.slides.length
-                  ).keys(),
-                ].map((idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      instanceRef.current?.moveToIdx(idx);
-                    }}
-                    className={`w-3 h-3 rounded-full mx-1 ${
-                      currentSlide === idx ? "bg-gray-900" : "bg-gray-400"
-                    }`}
-                  ></button>
-                ))}
-              </div>
-            )} */}
+                <div className="!sm:w-[400px] !md:w-auto ml-4">
+                  <div className="ml-2 top-4 left-4 p-3 !pr-0 rounded text-black-300 text-center">
+                    <h3 className="mt-2 font-medium text-[12px]">
+                      Axel & Blue
+                    </h3>
+                    <p className="mt-2 font-semibold text-[16px]">
+                      Made From The Real Chocolate Ingredient
+                    </p>
+                    <div className="flex justify-center"></div>
+                  </div>
+                  <div className="flex justify-center">
+                    <Image
+                      src={Ellen}
+                      alt="Food Image 2"
+                      width={300}
+                      height={250}
+                      className="object-cover rounded-lg test-1"
+                    />
+                  </div>
+                </div>
+              </Slider>
+            </div>
           </div>
         </>
       )}
@@ -254,7 +317,7 @@ const HealthCareProducts = () => {
       {activeTab === "cat" && (
         <div className="hidden lg:flex flex-col lg:flex-row gap-6">
           <div className="relative flex-auto w-64">
-            <div className="relative bg-[url('/images/dog-food-and-leash.png')] min-h-[546px] rounded-lg overflow-hidden">
+            <div className="relative bg-[url('../assets/images/dog-food-and-leash.png')] min-h-[546px] rounded-lg overflow-hidden">
               <div className="absolute top-4 left-4 p-2 text-black-300 rounded mt-8">
                 <h3 className="text-[12px]">Accessories + Food Combo</h3>
                 <p className="text-[16px] uppercase pr-52 text-semibold">
@@ -275,7 +338,7 @@ const HealthCareProducts = () => {
                 <FullRoundedButton title={"Order Now"} />
               </div>
               <Image
-                src="/images/orderNow.png"
+                src={orderNow}
                 alt="Food Image 1"
                 width={200}
                 height={150}
@@ -292,7 +355,7 @@ const HealthCareProducts = () => {
                 <FullRoundedButton title={"Order Now"} />
               </div>
               <Image
-                src="/images/ellen-and-co-peanut-butter-treats.png"
+                src={Ellen}
                 alt="Food Image 2"
                 width={200}
                 height={150}
@@ -313,7 +376,7 @@ const HealthCareProducts = () => {
                 <MediumRoundedButton title={"Order Now"} />
               </div>
               <Image
-                src="/images/peanut-butter.png"
+                src={PeanutButter}
                 alt="Peanut Butter Cookies"
                 width={300}
                 height={300}

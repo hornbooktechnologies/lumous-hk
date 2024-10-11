@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
-import "keen-slider/keen-slider.min.css";
 import { Poppins } from "@next/font/google";
 
 export const poppins = Poppins({
