@@ -55,7 +55,7 @@ const HealthCareProducts = () => {
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
-    customPaging: (i: any) => {
+    customPaging: () => {
       const dotSize = isSmallScreen ? "5px" : isTabletScreen ? "7px" : "10px";
       const marginSpacing = isSmallScreen
         ? "0 3px"
@@ -81,7 +81,7 @@ const HealthCareProducts = () => {
     <div className="py-8 max-w-7xl mx-auto px-15">
       <div className="text-center mb-8">
         <h4 className="font-medium lg:text-[16px] text-[10px] tracking-[0.02em] leading-[15px] lg:leading-[24px] uppercase text-black-300 opacity-50 mb-5">
-          Based on Veterinary Doctor's
+          Based on Veterinary Doctor&apos;s
         </h4>
         <h2 className="px-2 text-3xl lg:px-80 text-[16px] lg:text-[30px] leading-[24px] lg:leading-[45px] font-medium text-black-300">
           Some Of Our Favourites To Care For Their Whole Health

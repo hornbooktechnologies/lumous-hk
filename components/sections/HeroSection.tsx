@@ -43,7 +43,7 @@ const HeroSection = () => {
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
-    customPaging: (i: any) => {
+    customPaging: () => {
       const dotSize = isSmallScreen ? "5px" : isTabletScreen ? "7px" : "10px";
       const marginSpacing = isSmallScreen
         ? "0 3px"
