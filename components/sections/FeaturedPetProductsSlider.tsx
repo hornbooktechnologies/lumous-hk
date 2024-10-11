@@ -6,38 +6,43 @@ import "slick-carousel/slick/slick-theme.css";
 import { OutlinedButton } from "@/components/shared/ButtonmdRounded";
 import Image from "next/image";
 import RightArrow from "@/assets/images/thin_long_right.png";
-import ArrowLeft from "/images/arrow-left.png";
-import ArrowRight from "/images/arrow-right.png";
 import { sliderData } from "@/app/constant";
 
 const FeaturedPetProductsSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-// Custom Next Arrow Component
-const CustomNextArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <div
-      onClick={onClick}
-      className="absolute right-0 lg:right-[35%] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
-    >
-      <Image src="/images/arrow-right.png" alt="Next Arrow" width={40} height={40} />
-    </div>
-  );
-};
+  const CustomNextArrow = (props: any) => {
+    const { onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        className="absolute right-0 lg:right-[35%] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
+      >
+        <Image
+          src="/images/arrow-right.png"
+          alt="Next Arrow"
+          width={40}
+          height={40}
+        />
+      </div>
+    );
+  };
 
-// Custom Prev Arrow Component
-const CustomPrevArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <div
-      onClick={onClick}
-      className="absolute left-0 lg:left-[35%] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
-    >
-      <Image src="/images/arrow-left.png" alt="Previous Arrow" width={40} height={40} />
-    </div>
-  );
-};
-
+  const CustomPrevArrow = (props: any) => {
+    const { onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        className="absolute left-0 lg:left-[35%] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
+      >
+        <Image
+          src="/images/arrow-left.png"
+          alt="Previous Arrow"
+          width={40}
+          height={40}
+        />
+      </div>
+    );
+  };
 
   const settings = {
     className: "center",
@@ -48,8 +53,8 @@ const CustomPrevArrow = (props: any) => {
     speed: 500,
     focusOnSelect: true,
     arrows: true,
-    nextArrow: <CustomNextArrow />, // Use the custom next arrow
-    prevArrow: <CustomPrevArrow />, // Use the custom prev arrow
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
     beforeChange: (_current: any, next: React.SetStateAction<number>) =>
       setActiveSlide(next),
     responsive: [
