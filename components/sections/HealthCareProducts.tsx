@@ -31,7 +31,6 @@ const HealthCareProducts = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   const settings = {
     className: "center",
     dots: true,
@@ -56,7 +55,7 @@ const HealthCareProducts = () => {
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
-    customPaging: (i: any) => {
+    customPaging: () => {
       const dotSize = isSmallScreen ? "5px" : isTabletScreen ? "7px" : "10px";
       const marginSpacing = isSmallScreen
         ? "0 3px"
@@ -81,10 +80,10 @@ const HealthCareProducts = () => {
   return (
     <div className="py-8 max-w-7xl mx-auto px-15">
       <div className="text-center mb-8">
-        <h4 className="font-medium text-sm text-[16px] tracking-[0.02em] leading-[24px] uppercase text-black-300 opacity-50 mb-5">
-          Based on Veterinary Doctor's
+        <h4 className="font-medium lg:text-[16px] text-[10px] tracking-[0.02em] leading-[15px] lg:leading-[24px] uppercase text-black-300 opacity-50 mb-5">
+          Based on Veterinary Doctor&apos;s
         </h4>
-        <h2 className="px-2 text-3xl lg:px-80 text-[30px] leading-[45px] font-medium text-black-300">
+        <h2 className="px-2 text-3xl lg:px-80 text-[16px] lg:text-[30px] leading-[24px] lg:leading-[45px] font-medium text-black-300">
           Some Of Our Favourites To Care For Their Whole Health
         </h2>
       </div>
@@ -125,7 +124,7 @@ const HealthCareProducts = () => {
           <button
             key={index + 1}
             onClick={() => setActiveTab(tab.name)}
-            className={`flex flex-col items-center justify-center py-2.5 px-5 rounded-xl lg:rounded ${
+            className={`flex flex-col items-center justify-center py-2.5 px-5 rounded-3xl lg:rounded ${
               activeTab === tab.name ? "bg-[#112025]" : "bg-gray-50"
             }`}
           >
@@ -235,13 +234,13 @@ const HealthCareProducts = () => {
                       </p>
                     </div>
                     <div>
-                    <Image
-                      src={DogFood}
-                      alt="Peanut Butter Cookies"
-                      width={300}
-                      height={400}
-                      className="w-full object-cover rounded-lg test-00"
-                    />
+                      <Image
+                        src={DogFood}
+                        alt="Peanut Butter Cookies"
+                        width={300}
+                        height={400}
+                        className="w-full object-cover rounded-lg test-00"
+                      />
                     </div>
                   </div>
                 </div>

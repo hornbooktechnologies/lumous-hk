@@ -33,7 +33,7 @@ const PetCommunityShowcase = () => {
                     className="mb-4 mx-auto text-pink-500"
                   />
                   <p className="mb-4 text-[24px] leading-[36px] text-center text-green-200 font-normal">
-                    "I Think Having An Animal In Your Life Makes You A Better Human."
+                  &quot;I Think Having An Animal In Your Life Makes You A Better Human.&quot;
                   </p>
                 </div>
                 <div className="flex justify-between py-2">
