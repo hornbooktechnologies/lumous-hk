@@ -15,19 +15,19 @@ const Footer: React.FC = () => {
   const [showPetFood, setShowPetFood] = useState(false);
   return (
     <div className="footer-bg bg-green-100 relative">
-     <div className="absolute inset-0 -top-[83px] bg-[url('/images/footer-bg.png')] bg-no-repeat bg-cover z-0 lg:bg-center lg:bg-[length:cover] lg:w-full">
+      <div className="absolute inset-0 -top-[83px] bg-[url('/images/footer-bg.png')] bg-no-repeat bg-cover z-0 lg:bg-center lg:bg-[length:cover] lg:w-full">
       </div>
       <div className="absolute inset-0 -top-[95px] bg-[url('/images/footer-mobile-bg.png')] bg-no-repeat bg-cover bg-center z-0 lg:hidden"></div>
 
-      <div className=" container mx-auto pt-10 px-0 lg:py-16 lg:px-20 relative z-[999]">
-        <div className="flex justify-between flex-col lg:flex-row gap-8 px-5 lg:px-0">
+      <div className=" container mx-auto pt-0 lg:pt-10 px-0 lg:py-16 lg:px-20 relative z-[999]">
+        <div className="flex justify-between flex-col lg:flex-row gap-4 lg:gap-8 px-5 lg:px-0">
           <div className="flex justify-between gap-[50px]">
             <div className="flex-none w-full lg:w-1/3">
-              <Image src={Logo} width={190} height={50} alt="Logo" />
-              <p className="text-green-200 mt-4 font-medium text-[12px] leading-[18px] tracking-[0.02em]">
+              <Image src={Logo} alt="Logo" className="w-[115px] h-[30px] lg:w-[190px] lg:h-[50px] object-cover lg:mt-6" />
+              <p className="text-green-200 mt-1 lg:mt-4 font-medium text-[8px] lg:text-[12px] leading-[18px] tracking-[0.02em]">
                 © 2021 PetStore. All Rights Reserved.
               </p>
-              <p className="text-black-300 mt-4 font-normal text-[14px] leading-[21px]">
+              <p className="text-black-300 mt-4 font-normal text-[10px] lg:text-[14px] leading-4 lg:leading-[21px]">
                 Egestas nec etiam maecenas aliquam a, lorem ornare eget non nec
                 placerat elit a enim fermentum ac integer eget ante mattis
                 cursus purus volutpat
@@ -42,11 +42,11 @@ const Footer: React.FC = () => {
                   (252) 555-0126
                 </p>
               </div>
-              <div className="block lg:hidden mt-5">
-                <h3 className="font-bold text-[22px] leading-[33px] text-green-50">
+              <div className="block lg:hidden mt-3">
+                <h3 className="font-bold text-[12px] lg:text-[22px] leading-[33px] text-green-50">
                   Social Media
                 </h3>
-                <div className="flex mt-4 space-x-4">
+                <div className="flex mt-2 space-x-4">
                   <Image
                     src={Facebook}
                     width={20}
@@ -249,12 +249,12 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="mb-4 text-gray-900 flex flex-row gap-3 items-center justify-between lg:hidden w-[85%] md:w-[50%] sm:w-[90%] max-w-[320px] mx-auto">
+          <div className="mb-4 text-[gray-900] flex flex-row gap-3 items-center justify-between lg:hidden w-[85%] md:w-[50%] sm:w-[90%] max-w-[320px] mx-auto">
             <p className="font-medium flex items-center text-[10px] leading-[15px]">
               <Image src={Mail} className="mr-2 w-4 h-3" alt="Logo" />
               Sayhi@Dubidoo.Com
             </p>
-            <div className="h-[30px] bg-black-50 w-[2px] my-2"></div>
+            <div className="h-[30px] bg-[#222222] w-[2px] my-2"></div>
             <p className="font-medium flex items-center text-[10px] leading-[15px]">
               <Image src={Phone} className="mr-2 w-4 h-3" alt="Logo" />
               (252) 555-0126
@@ -263,8 +263,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="relative bg-teal-800 text-white text-center py-4 text-xs lg:text-base">
-        <ul className="flex justify-center space-x-6">
+      <div className="relative bg-green-50 text-white lg:!text-[12px] !text-[8px] text-center py-4 text-xs">
+        <ul className="flex justify-center space-x-4 lg:space-x-6">
           <li className="cursor-pointer hover:underline">Privacy Policy</li>
           <li className="cursor-pointer hover:underline w-[1px] bg-white"></li>
           <li className="cursor-pointer hover:underline">T & C</li>

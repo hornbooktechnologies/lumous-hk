@@ -13,7 +13,7 @@ const HeaderNotificationSlider = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} !top-[65%] custom-arrow !right-[50px] lg:!right-[450px]`}
+        className={`${className} !top-[68%] custom-arrow !right-[28px] lg:!right-[450px]`}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -26,7 +26,7 @@ const HeaderNotificationSlider = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} !top-[65%] custom-arrow !left-[50px] lg:!left-[450px]`}
+        className={`${className} !top-[68%] custom-arrow !left-[38px] lg:!left-[450px]`}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -44,7 +44,7 @@ const HeaderNotificationSlider = () => {
   };
 
   return (
-    <div className="notification-slider overflow-hidden slider-container bg-teal-800 text-center text-white py-2 text-sm">
+    <div className="notification-slider overflow-hidden slider-container bg-green-50 text-center text-white py-1 lg:py-2 text-sm">
       <Slider {...settings}>
         {NotificationSliderData.map((item, index) => (
           <div
