@@ -6,24 +6,24 @@ import DogImage from "@/assets/images/dog.png";
 const PetNewsletterSubscription = () => {
   return (
     <div className="mx-auto max-w-7xl py-12 px-6">
-      <div className="bg-[#F9FAFB] relative py-5 lg:py-14 px-6 rounded-lg sm:px-12 lg:px-24">
+      <div className="bg-[#F9FAFB] relative py-4 lg:py-14 px-4 rounded-lg sm:px-12 lg:px-24">
         <div className="flex flex-col items-center justify-between flex-wrap lg:flex-row lg:items-start">
           <div className="flex-1 lg:pr-10">
             <h2 className="mb-2 text-[#000000] text-[16px] lg:text-[30px] font-normal">
               Stay Connected With Us.
             </h2>
-            <p className="mb-8 text-[12px] lg:text-[16px] text-[#666666]">
+            <p className="mb-4 lg:mb-8 text-[12px] lg:text-[16px] text-[#666666]">
               Choose your pet and subscribe! Receive exclusive discounts to always buy at the best price in Petshop.
             </p>
 
-            <div className="flex flex-wrap items-center justify-start gap-5 mb-4 mt-2 space-x-4">
+            <div className="flex flex-wrap items-center justify-start lg:gap-5 gap-3 mb-4 mt-2 lg:space-x-4 ">
               {["Dog", "Cat", "Small Pets", "Fish", "Birds"].map((pet, index) => (
                 <div key={index} className="flex items-center text-[12px] lg:text-[16px]">
                   <input
                     type="checkbox"
                     id={pet.toLowerCase()}
                     name={pet.toLowerCase()}
-                    className="mr-2 custom-checkbox"
+                    className="mr-2 custom-checkbox w-[16px]"
                     defaultChecked={pet === "Dog"}
                   />
                   <label htmlFor={pet.toLowerCase()} className="text-[#444444]">
@@ -33,7 +33,7 @@ const PetNewsletterSubscription = () => {
               ))}
             </div>
 
-            <div className="flex text-[10px] lg:text-[14px] w-full lg:w-3/4 bg-white mt-5 lg:mt-16 p-2 rounded-full">
+            <div className="flex text-[10px] lg:text-[14px] w-full lg:w-3/4 bg-white mt-5 lg:mt-16 rounded-full">
               <input
                 type="text"
                 placeholder="Signup for Newsletter"

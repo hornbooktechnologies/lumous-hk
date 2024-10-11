@@ -13,7 +13,7 @@ const HeaderNotificationSlider = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} !top-[68%] custom-arrow !right-[28px] lg:!right-[450px]`}
+        className={`${className} !top-[68%] custom-arrow !right-[6px] lg:!right-[450px]`}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -26,7 +26,7 @@ const HeaderNotificationSlider = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} !top-[68%] custom-arrow !left-[38px] lg:!left-[450px]`}
+        className={`${className} !top-[68%] custom-arrow !left-[16px] lg:!left-[450px]`}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >

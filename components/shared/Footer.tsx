@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
               </span>
             </button>
             {showServices && (
-              <ul className="mt-2 space-y-2 px-6 py-2 bg-white rounded-md">
+              <ul className="mt-2 space-y-2 px-6 py-2 bg-white rounded-md text-[12px]">
                 <li className="text-black-300 cursor-pointer hover:text-teal-500">
                   TRACK ORDER
                 </li>
@@ -184,7 +184,7 @@ const Footer: React.FC = () => {
               </span>
             </button>
             {showPetFood && (
-              <div className="grid grid-cols-2 mt-2 px-6 py-2 bg-white rounded-md">
+              <div className="grid grid-cols-2 mt-2 px-6 py-2 bg-white rounded-md text-[12px]">
                 <ul className="space-y-2">
                   <li className="text-black-300 cursor-pointer hover:text-teal-500">
                     DOG
@@ -249,7 +249,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="mb-4 text-[gray-900] flex flex-row gap-3 items-center justify-between lg:hidden w-[85%] md:w-[50%] sm:w-[90%] max-w-[320px] mx-auto">
+          <div className="mb-4 text-[gray-900] flex flex-row gap-3 items-center justify-between lg:hidden  mx-auto">
             <p className="font-medium flex items-center text-[10px] leading-[15px]">
               <Image src={Mail} className="mr-2 w-4 h-3" alt="Logo" />
               Sayhi@Dubidoo.Com
@@ -263,7 +263,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="relative bg-green-50 text-white lg:!text-[12px] !text-[8px] text-center py-4 text-xs">
+      <div className="relative bg-green-50 text-white lg:!text-[12px] !text-[8px] text-center lg:py-4 py-1 text-xs">
         <ul className="flex justify-center space-x-4 lg:space-x-6">
           <li className="cursor-pointer hover:underline">Privacy Policy</li>
           <li className="cursor-pointer hover:underline w-[1px] bg-white"></li>
