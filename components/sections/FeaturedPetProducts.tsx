@@ -33,7 +33,7 @@ const FeaturedPetProducts = () => {
           className="w-full rounded-lg object-cover"
         />
         <div className="px-4 mt-4">
-          <h1 className="pr-10 text-left text-[16px] font-bold text-black-300">
+          <h1 className="pr-10 text-left lg:text-[16px] lg:leading-[24px] font-bold text-black-300">
             Dogs do speak, but only to those who know how to listen.
           </h1>
           <p className="pr-8 text-left text-[10px] font-normal text-black-300">

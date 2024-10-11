@@ -21,7 +21,7 @@ const InfoBlock: React.FC<IInfoBlock> = ({ title, subTitle, img }) => {
 const Features = () => {
   return (
     <div className='py-10 feature-bg lg:py-16 bg-blue-50'>
-      <div className='container overflow-x-auto px-4 mx-auto w-full'>
+      <div className='container overflow-x-auto lg:overflow-x-hidden px-4 mx-auto w-full'>
         <div className='inline-flex space-x-6 justify-center lg:space-x-6 lg:space-y-0 lg:flex-row ml-4 mr-6'>
           <InfoBlock
             title='Fresh Product'
