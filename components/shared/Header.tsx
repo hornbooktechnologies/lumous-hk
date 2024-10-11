@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     <div>
       <NotificationSlider />
 
-      <div className="bg-white flex items-center justify-between py-5 px-6 lg:px-20 shadow-md">
+      <div className="bg-white flex items-center justify-between py-2 lg:py-5 px-6 lg:px-20 shadow-md">
         <div className="lg:hidden">
           <Image
             src={FaBars}
@@ -28,10 +28,8 @@ const Header: React.FC = () => {
         <div className="text-center lg:text-left">
           <Image
             src={Logo}
-            width={190}
-            height={50}
             alt="Logo"
-            className="mx-auto lg:m-0"
+            className="mx-auto lg:m-0 w-[96px] lg:w-[190px]"
           />
         </div>
 
@@ -103,10 +101,8 @@ const Header: React.FC = () => {
           <div className="relative rounded-full lg:bg-gray-50 p-2">
             <Image
               src={Bag}
-              width={25}
-              height={25}
               alt="Shopping Cart"
-              className="cursor-pointer"
+              className="cursor-pointer w-[15px] lg:w-[25px]"
             />
             <span className="absolute -top-1 right-0 bg-[#FDC161] text-white text-xs rounded-full px-[6px]">
               1
@@ -128,9 +124,10 @@ const Header: React.FC = () => {
           </div>
           <input
             type="text"
-            className="w-full pl-10 pr-4 py-3 border rounded-3xl bg-gray-50 text-black-300 focus:outline-none placeholder:text-black-300 opacity-50"
+            className="w-full pl-10 pr-4 py-2 lg:py-3 rounded-full bg-gray-50 text-black-300 focus:outline-none font-semibold text-[12px] lg:text-[16px] leading-[24px] placeholder:text-black-300 opacity-50 border-none"
             placeholder="Search For Product"
           />
+
         </div>
       </div>
     </div>
